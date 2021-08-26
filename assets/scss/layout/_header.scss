@@ -1,0 +1,165 @@
+.main-shape-wrap {
+  filter: drop-shadow(0 0 13px rgba(50, 50, 0, 0.2));
+}
+
+.main-shape {
+  margin: -9% 0;
+  background-color: #f6f6f6;
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 20%, 50% 0%, 10% 20%);
+  clip-path: polygon(10% 100%, 90% 100%, 90% 20%, 50% 0%, 10% 20%);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.jumbotron {
+  padding: 0;
+  background-color: $color-white;
+
+  &__logo {
+    position: absolute;
+    z-index: 2;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &__mobile {
+    display: none;
+  }
+
+  &__image {
+    display: block;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 0%, 0% 64%, 35% 100%, 50% 84%, 65% 100%, 100% 64%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 64%, 35% 100%, 50% 84%, 65% 100%, 100% 64%, 100% 0%);
+  }
+}
+
+.logo {
+  height: 80px;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1780px) {
+  .main-shape {
+    -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 17%, 50% 0%, 10% 17%);
+    clip-path: polygon(10% 100%, 90% 100%, 90% 17%, 50% 0%, 10% 17%);
+  }
+}
+
+@media only screen and (max-width : 1600px) {
+  .main-shape {
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 15%, 50% 0%, 10% 15%);
+  clip-path: polygon(10% 100%, 90% 100%, 90% 15%, 50% 0%, 10% 15%);
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1560px) {
+  .main-shape {
+    -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 13%, 50% 0%, 10% 13%);
+    clip-path: polygon(10% 100%, 90% 100%, 90% 13%, 50% 0%, 10% 13%);
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .main-shape {
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 11%, 50% 0%, 10% 11%);
+  clip-path: polygon(10% 100%, 90% 100%, 90% 11%, 50% 0%, 10% 11%);
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .main-shape {
+    margin: -10% 0;
+  -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 8%, 50% 0%, 10% 8%);
+  clip-path: polygon(10% 100%, 90% 100%, 90% 8%, 50% 0%, 10% 8%);
+  }
+
+  .jumbotron {
+    .logo {
+      height: 58px;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .main-shape {
+    margin: -10% 0;
+    -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 7%, 50% 0%, 10% 7%);
+    clip-path: polygon(10% 100%, 90% 100%, 90% 7%, 50% 0%, 10% 7%);
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 720px) {
+  .main-shape {
+    margin: -10% 0;
+    -webkit-clip-path: polygon(10% 100%, 90% 100%, 90% 5%, 50% 0%, 10% 5%);
+    clip-path: polygon(10% 100%, 90% 100%, 90% 5%, 50% 0%, 10% 5%);
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .main-shape {
+    margin: -32% 0;
+    -webkit-clip-path: polygon(50% calc(0% - 0vw), calc(100% - 2vw) calc(8% - 12vw), calc(100% - 1vw) 100%, calc(100% - 99vw) 100%, calc(18% - 17vw) calc(8% - 12vw));
+    clip-path: polygon(50% calc(0% - 0vw), calc(100% - 2vw) calc(8% - 12vw), calc(100% - 1vw) 100%, calc(100% - 99vw) 100%, calc(18% - 17vw) calc(8% - 12vw));
+  }
+
+  .jumbotron {
+    &__mobile {
+      display: block;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      -webkit-clip-path: polygon(0% 0%, 0% 80%, 26% 91%, 50% 80%, 74% 91%, 100% 80%, 100% 0%);
+      clip-path: polygon(0% 0%, 0% 80%, 26% 91%, 50% 80%, 74% 91%, 100% 80%, 100% 0%);
+    }
+
+    &__image {
+      display: none;
+    }
+  }
+
+  .logo {
+    height: 58px;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+  .main-shape {
+    -webkit-clip-path: polygon(1% 100%, 99% 100%, 99% 5%, 50% 0%, 1% 5%);
+    clip-path: polygon(1% 100%, 99% 100%, 99% 5%, 50% 0%, 1% 5%);
+  }
+}
+
+@media only screen and (max-width : 375px) {
+  .main-shape {
+    -webkit-clip-path: polygon(1% 100%, 99% 100%, 99% 4%, 50% 0%, 1% 4%);
+    clip-path: polygon(1% 100%, 99% 100%, 99% 4%, 50% 0%, 1% 4%);
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .main-shape {
+    margin: -32% 0;
+    -webkit-clip-path: polygon(50% calc(0% - 0vw), calc(100% - 2vw) calc(5% - 27vw), calc(100% - 1vw) 100%, calc(100% - 99vw) 100%, calc(20% - 17vw) calc(5% - 25vw));
+    clip-path: polygon(50% calc(0% - 0vw), calc(100% - 2vw) calc(5% - 27vw), calc(100% - 1vw) 100%, calc(100% - 99vw) 100%, calc(20% - 17vw) calc(5% - 25vw));
+}
+}

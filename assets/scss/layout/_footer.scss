@@ -1,0 +1,199 @@
+// footer.container-fluid.text-center {
+//   position: relative;
+// }
+
+.footer {
+  position: relative;
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-clip-path: polygon(0 23%, 13% 0%, 35% 23%, 50% 0%, 64% 23%, 87% 0%, 100% 23%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 23%, 13% 0%, 35% 23%, 50% 0%, 64% 23%, 87% 0%, 100% 23%, 100% 100%, 0% 100%);
+  }
+
+  &__mobile {
+    display: none;
+  }
+
+  &__logo {
+    height: 90px;
+  }
+
+  &__fusion--logo {
+    position: absolute;
+    bottom: 62%;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    padding-top: 20px;
+    z-index: 2;
+    margin-top: 2%;
+    color: white;
+    font-size: 9px;
+    width: 100%;
+    background-color: rgba($color-black, 0.2);
+  }
+
+  &__evolve--logo {
+    width: 15%;
+    position: absolute;
+    right: 10%;
+    z-index: 2;
+    // margin-top: 2%;
+    bottom: 30%;
+  }
+
+  &__icons {
+    text-align: left;
+    width: 15%;
+    position: absolute;
+    left: 10%;
+    z-index: 2;
+    margin-top: 2%;
+    bottom: 25%;
+
+    &--head {
+      color: $color-white;
+      display: block;
+      margin-bottom: 15px;
+      // font-family: gotham-light;
+    }
+  }
+}
+
+.social-footer {
+  text-align: left;
+  height: 20px;
+  border: 0;
+  margin-bottom: 20%;
+  margin-right: 10px;
+}
+
+
+.evolve-logo {
+  height: 112px;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1560px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 720px) {
+  .footer {
+    &__fusion--logo {
+      top: 18%;
+    }
+
+    &__evolve--logo {
+      width: 19%;
+    }
+  }
+
+  .evolve-logo {
+    height: 90px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .footer {
+    &__mobile {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+
+    &__logo {
+      height: 90px;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__fusion--logo {
+      top: 16%;
+    }
+
+    &__bottom {
+      height: 60px;
+      padding-top: 20px;
+      margin-top: 2%;
+    }
+
+    &__evolve--logo {
+      width: 0;
+      left: 23%;
+      bottom: 18%;
+    }
+
+    &__icons {
+      text-align: center;
+      width: 100%;
+      left: 0;
+      margin-top: 0%;
+      bottom: 30%;
+
+      &--head {
+        margin-bottom: 15px;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .evolve-logo {
+    height: 112px;
+  }
+
+  .social-footer {
+    height: 45px;
+    border: 0;
+    margin-bottom: 20%;
+    margin-right: 10px;
+  }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .footer {
+    &__evolve--logo {
+      left: 16%;
+    }
+  }
+}

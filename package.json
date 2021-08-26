@@ -1,0 +1,59 @@
+{
+  "name": "fusion-db",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsteel/fusion-db.git"
+  },
+  "description": "Landing page for FusionDB Alpha Version",
+  "keywords": [
+    "FusionDB",
+    "Database",
+    "Multi-model",
+    "database",
+    "NoSQL",
+    "XML",
+    "Binary",
+    "KEY/VALUE",
+    "100%",
+    "eXist-db",
+    "API",
+    "Compatible."
+  ],
+  "author": "craig steel design",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -o dist/css assets/scss/style.scss",
+    "concat:css": "concat -o dist/css/styles.css dist/css/style.css",
+    "concat:js": "mkdir -p dist/js && concat -o dist/js/scripts.js assets/js/*.js",
+    "concat": "npm run concat:css && npm run concat:js",
+    "cssmin": "cleancss -o dist/css/styles.min.css dist/css/styles.css",
+    "uglify": "uglifyjs -o dist/js/scripts.min.js dist/js/scripts.js",
+    "imagemin": "imagemin --out-dir=dist/img assets/img/**/*.{png,jpg,gif}",
+    "build:css": "npm run scss && npm run concat:css && npm run cssmin",
+    "build:js": "npm run concat:js && npm run uglify",
+    "build:img": "npm run imagemin",
+    "build": "npm run build:css && npm run build:js && npm run build:img",
+    "watch:css": "onchange 'assets/scss/**/*.scss' -- npm run build:css",
+    "watch:js": "onchange 'assets/js/*.js' -- npm run build:js",
+    "watch": "npm-run-all --parallel watch:*"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.1.10",
+    "concat": "^1.0.3",
+    "ejs": "~2.5.7",
+    "glob": "~7.1.2",
+    "imagemin": "~5.3.1",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-svgo": "~5.2.2",
+    "node-sass": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "~2.6.1",
+    "svgstore-cli": "~1.3.0",
+    "uglify-js": "^3.1.7"
+  },
+  "dependencies": {
+    "onchange": "^7.1.0"
+  }
+}

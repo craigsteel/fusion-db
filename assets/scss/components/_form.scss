@@ -1,0 +1,138 @@
+.main-area {
+  &__form {
+    background-color: #ffffff;
+    margin: 50px -108%;
+    padding: 0 104%;
+    display: block;
+
+    &--heading {
+      font-size: 18px;
+      padding: 20px 0;
+      // font-family: gotham;
+    }
+
+    &--button {
+      text-align: center;
+      padding: 40px 0;
+      // font-family: gotham;
+    }
+  }
+
+  .top-form,
+  .middle-form,
+  .bottom-form {
+    width: 100%;
+    min-height: 65px;
+    margin: 10px 0;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: solid 1px rgba($color-black, 0.3);
+    }
+  }
+
+  .inner-form {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+  }
+
+  .inner-form:last-child {
+    margin-right: 0;
+  }
+
+  .middle-form {
+    clear: both;
+  }
+
+  .bottom-form {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    height: 120px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba($color-black, 0.2);
+  }
+}
+
+.label {
+  color: rgba($color-primary, 0.3);
+  // font-family: gotham-light;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1560px) {
+
+// }
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px) {
+
+// }
+
+// /* Medium Devices, Desktops */
+// @media only screen and (max-width : 992px) {
+
+// }
+
+// /* Small Devices, Tablets */
+// @media only screen and (max-width : 768px) {
+
+// }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .main-area {
+    &__form {
+      margin: 33px 0;
+      padding: 0 4%;
+
+      &--heading {
+        font-size: 17px;
+      }
+
+      &--button {
+        padding: 40px 0;
+      }
+    }
+
+    .top-form,
+    .middle-form,
+    .bottom-form {
+      width: 100%;
+      min-height: 65px;
+      margin: 10px 0;
+    }
+
+    .inner-form {
+      width: 100%;
+      margin-bottom: 5%;
+      display: block;
+      margin-right: 2%;
+    }
+
+    .inner-form:last-child {
+      margin-right: 0;
+    }
+
+    textarea {
+      height: 120px;
+      width: 100%;
+  }
+  }
+}
+
+// /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px) {
+//   .main-shape {
+//     -webkit-clip-path: polygon(50% calc(0% - 0vw), calc(100% - 13vw) calc(21% - 10vw), calc(100% - 13vw) 100%, calc(100% - 87vw) 100%, calc(29% - 16vw) calc(21% - 10vw));
+//     clip-path: polygon(50% calc(0% - 0vw), calc(100% - 13vw) calc(21% - 10vw), calc(100% - 13vw) 100%, calc(100% - 87vw) 100%, calc(29% - 16vw) calc(21% - 10vw));
+//   }
+// }

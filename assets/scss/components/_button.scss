@@ -1,0 +1,146 @@
+.btn {
+
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    border-radius: 0;
+    padding: 9px 15px 8px 15px;
+    transition: all 0.2s;
+    position: relative;
+    // font-family: gotham;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.5) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-primary;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-green;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-green;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+img.download__image {
+  height: 15px;
+  margin-left: 5px;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1560px) {
+
+// }
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px) {
+
+// }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .btn {
+    &:link,
+    &:visited {
+      font-size: 9px;
+      padding: 10px 10px;
+    }
+  }
+}
+
+// /* Small Devices, Tablets */
+// @media only screen and (max-width : 768px) {
+
+// }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 720px) {
+  .btn {
+    &:link,
+    &:visited {
+      font-size: 10px;
+      padding: 12px 12px;
+    }
+  }
+  a.btn.btn--white {
+    margin: 0% 66% 0%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .btn {
+    &:link,
+    &:visited {
+      font-size: 11px;
+      padding: 12px 12px;
+    }
+  }
+  a.btn.btn--white {
+    margin: 0% 40% 0%;
+  }
+}
+
+@media only screen and (max-width : 375px) {
+  a.btn.btn--white {
+    margin: 0% 33% 0%;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .btn {
+    &:link,
+    &:visited {
+      font-size: 10px;
+      padding: 12px 12px;
+    }
+  }
+
+  a.btn.btn--white {
+    margin: 0% 29% 0%;
+  }
+}
